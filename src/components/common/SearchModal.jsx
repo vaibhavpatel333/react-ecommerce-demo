@@ -137,7 +137,9 @@ const SearchModal = ({ isOpen, onClose }) => {
                 {/* Search Input */}
                 <div className="p-4 border-b border-slate-200 dark:border-slate-700">
                     <div className="relative">
-                        <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" fontSize="small" />
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <SearchIcon className="text-slate-400 flex items-center" fontSize="small" />
+                        </div>
                         <input
                             type="text"
                             value={searchQuery}
@@ -146,7 +148,7 @@ const SearchModal = ({ isOpen, onClose }) => {
                             className="w-full pl-10 pr-20 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none text-slate-900 dark:text-slate-100"
                             autoFocus
                         />
-                        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                        <div className="absolute inset-y-0 right-0 flex items-center pr-3 gap-2">
                             {searchQuery && (
                                 <button
                                     onClick={() => setSearchQuery('')}

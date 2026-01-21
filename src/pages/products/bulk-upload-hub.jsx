@@ -96,10 +96,24 @@ const BulkUploadHub = () => {
 
         {/* Page Title */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold tracking-tight mb-2">Bulk Product Upload Hub</h1>
-          <p className="text-slate-600 dark:text-slate-400">
-            Manage and sync your large scale inventory effortlessly.
-          </p>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-2">
+            <div>
+              <h1 className="text-3xl font-bold tracking-tight mb-2">Bulk Product Upload Hub</h1>
+              <p className="text-slate-600 dark:text-slate-400">
+                Manage and sync your large scale inventory effortlessly.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors">
+                <Download fontSize="small" />
+                Download Template
+              </button>
+              <button className="bg-primary hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors shadow-sm">
+                <History fontSize="small" />
+                View Audit Logs
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -180,18 +194,6 @@ const BulkUploadHub = () => {
 
           {/* Right Sidebar */}
           <div className="lg:col-span-1 space-y-6">
-            {/* Action Buttons */}
-            <div className="space-y-3">
-              <button className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors">
-                <Download fontSize="small" />
-                Download Template
-              </button>
-              <button className="w-full bg-primary hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors shadow-sm">
-                <History fontSize="small" />
-                View Audit Logs
-              </button>
-            </div>
-
             {/* Instructions Card */}
             <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm p-6">
               <div className="flex items-center gap-2 mb-4">
